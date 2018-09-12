@@ -1,0 +1,20 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>Menu</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content>
+
+  <super-tabs tabsPlacement="top" (tabSelect)="onTabSelect($event)">
+
+    <super-tab *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"></super-tab>
+  </super-tabs>
+
+</ion-content>
