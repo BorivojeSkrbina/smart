@@ -1,12 +1,73 @@
-.hamburger {
-    position: fixed;
-    top:0;
-    left: 0;
-    display: block;
-    width: 60px;
-    z-index: 99999;
+// .hamburger {
+//     position: fixed;
+//     top:0;
+//     left: 0;
+//     display: block;
+//     width: 60px;
+//     z-index: 99999;
+// }
+
+// super-tabs-toolbar {
+//     padding-left: 60px;
+// }
+
+
+
+
+super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button {
+    text-transform: capitalize;
 }
 
-super-tabs-toolbar {
-    padding-left: 60px;
-}
+// Font Awesome
+.fa-icons-general {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+  }
+  
+  // qr
+  .ion-ios-fa-qrcode::before,
+    .ion-ios-fa-qrcode-outline::before,
+    .ion-md-fa-qrcode::before {
+        @extend .fa-icons-general;
+        content: "\f029";
+    }
+  // map
+    .ion-ios-fa-map::before,
+    .ion-ios-fa-map-outline::before,
+    .ion-md-fa-map::before {
+        @extend .fa-icons-general;
+        content: "\f278";
+    }
+    // club
+    .ion-ios-fa-club::before,
+    .ion-ios-fa-club-outline::before,
+    .ion-md-fa-club::before {
+        @extend .fa-icons-general;
+        content: "\f247";
+    }
+    // globe
+    .ion-ios-fa-globe::before,
+    .ion-ios-fa-globe-outline::before,
+    .ion-md-fa-globe::before {
+        @extend .fa-icons-general;
+        content: "\f0ac";
+    }
+    // exchange
+    .ion-ios-fa-exchange::before,
+    .ion-ios-fa-exchange-outline::before,
+    .ion-md-fa-exchange::before {
+        @extend .fa-icons-general;
+        content: "\f0ec";
+    }
+    // tip
+    .ion-ios-fa-tip::before,
+    .ion-ios-fa-tip-outline::before,
+    .ion-md-fa-tip::before {
+        @extend .fa-icons-general;
+        content: "\f123";
+    }

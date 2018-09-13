@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, Tabs } from 'ionic-angular';
 import { SuperTabs } from 'ionic2-super-tabs';
+
 
 
 
@@ -12,18 +13,21 @@ import { SuperTabs } from 'ionic2-super-tabs';
 })
 export class HomePage {
 
+
   pages = [
-    { pageName: 'NewsPage', title: 'News', icon: 'flame', id: 'newsTab' },
-    { pageName: 'AboutPage', title: 'About', icon: 'help-circle', id: 'aboutTab' },
-    { pageName: 'AccountPage', title: 'Body', icon: 'body', id: 'accountTab' },
-    { pageName: 'NewsPage', title: 'News2', icon: 'flame', id: 'newsTab2' },
-    { pageName: 'AboutPage', title: 'About2', icon: 'help-circle', id: 'aboutTab2' },
-    { pageName: 'AccountPage', title: 'Body2', icon: 'body', id: 'accountTab2' }
+    { pageName: 'CodePage', title: 'Code', icon: 'fa-qrcode', id: 'codeTab' },
+    { pageName: 'MapPage', title: 'Map', icon: 'fa-map', id: 'mapTab' },
+    { pageName: 'ClubPage', title: 'Club', icon: 'fa-club', id: 'clubTab' },
+    { pageName: 'NetworkPage', title: 'Network', icon: 'fa-globe', id: 'networkTab' },
+    { pageName: 'ExchangePage', title: 'Exchange', icon: 'fa-exchange', id: 'exchangeTab' },
+    { pageName: 'TipPage', title: 'Tip', icon: 'fa-tip', id: 'tipTab' }
   ];
+
 
   selectedTab = 0;
 
   @ViewChild(SuperTabs) superTabs: SuperTabs;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
@@ -49,9 +53,36 @@ export class HomePage {
       });
       // alert.present();
     } else {
+
+console.log(ev);
+
       this.selectedTab = ev.index;
       this.superTabs.clearBadge(this.pages[ev.index].id);
     }
   }
+
+  ionViewDidEnter() {
+// console.log(this.navParams);
+
+    let openTab = this.navParams.get('openTab');
+    
+    if (openTab) {
+      
+      console.log(openTab);
+        this.superTabs.slideTo(openTab);
+
+      
+    }
+
+
+
+
+  }
+
+
+  
+  
+
+
 
 }

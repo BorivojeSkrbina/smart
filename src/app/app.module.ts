@@ -5,14 +5,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { SidebarPage } from '../pages/sidebar/sidebar';
+import { LoginPage } from '../pages/login/login';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 
 
 @NgModule({
   declarations: [
     MyApp,
-    SidebarPage
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +22,7 @@ import { SuperTabsModule } from 'ionic2-super-tabs';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    SidebarPage
+    LoginPage
   ],
   providers: [
     StatusBar,

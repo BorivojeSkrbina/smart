@@ -14,25 +14,19 @@
 <ion-content>
 
 
-
-
-
-
- 
-
-
-
     <ion-navbar class="hamburger">
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
           </button>
     </ion-navbar>
 
-  <super-tabs tabsPlacement="top" (tabSelect)="onTabSelect($event)" class="tabs">
+  <super-tabs #myTabs tabsPlacement="top" (tabSelect)="onTabSelect($event)" class="tabs">
 
     
+        <super-tab *ngFor="let page of pages" [root]="page.pageName" [title]="page.title" [icon]="page.icon" [id]="page.id"></super-tab>
 
-    <super-tab *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"  ></super-tab>
+        
   </super-tabs>
+    
 
 </ion-content>

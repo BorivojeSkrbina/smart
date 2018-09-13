@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the NewsPage page.
+ * Generated class for the ClubPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-news',
-  templateUrl: 'news.html',
+  selector: 'page-club',
+  templateUrl: 'club.html',
 })
-export class NewsPage {
+export class ClubPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsPage');
+    console.log('ionViewDidLoad ClubPage');
   }
 
 }
