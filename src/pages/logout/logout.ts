@@ -4,16 +4,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-exchange',
-  templateUrl: 'exchange.html',
+  selector: 'page-logout',
+  templateUrl: 'logout.html',
 })
-export class ExchangePage {
+export class LogoutPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ExchangePage');
+    console.log('ionViewDidLoad LogoutPage');
   }
 
 }

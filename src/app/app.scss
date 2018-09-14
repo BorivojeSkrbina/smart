@@ -12,10 +12,74 @@
 // }
 
 
+// COLORS
+span.blue {
+    color: #03a9f4;
+}
+
+// MENU
+ion-menu ion-list button ion-icon:before {
+    color:#40e3a4;;
+}
+
+ion-menu ion-list button:nth-child(-n+3) ion-icon:before {
+    color:#03a9f4;
+}
+
+ion-menu ion-list button:last-child ion-icon:before {
+    color:#000;
+}
+
+// TABS
+super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button:not(.selected) {
+    color: #000 !important;
+}
+
+super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button:nth-child(-n+3){
+    color: #03a9f4;
+}
+
+super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button:nth-child(n+4){
+    color: #40e3a4;
+}
 
 
+
+// LOGIN PAGE
+.login {
+    background: #03a9f4;
+    text-align: center;
+}
+
+.login h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 30px !important;
+}
+
+.login .button-md {
+    background: #589f44 !important;
+    font-size: 2rem;
+    padding: 1.7em 1.3em;
+    line-height: 1.2;
+    border-radius: 10px;
+    font-weight: bold;
+
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+
+
+// TABS
 super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button {
     text-transform: capitalize;
+}
+
+.button-md-primary {
+    opacity: 0;
 }
 
 // Font Awesome
@@ -70,4 +134,11 @@ super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons sup
     .ion-md-fa-tip::before {
         @extend .fa-icons-general;
         content: "\f123";
+    }
+    // log-out
+    .ion-ios-fa-logout::before,
+    .ion-ios-fa-logout-outline::before,
+    .ion-md-fa-logout::before {
+        @extend .fa-icons-general;
+        content: "\f08b";
     }

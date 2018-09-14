@@ -1,32 +1,15 @@
-
-<!-- <ion-header>
-
-    <ion-navbar>
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-          </button>
-      <ion-title>Menu</ion-title>
-    </ion-navbar>
-  
-  </ion-header> -->
-
-
 <ion-content>
 
-
-    <ion-navbar class="hamburger">
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-          </button>
-    </ion-navbar>
+  <ion-navbar class="hamburger">
+    <ion-buttons end>
+      <button ion-button menuToggle="right">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 
   <super-tabs #myTabs tabsPlacement="top" (tabSelect)="onTabSelect($event)" class="tabs">
-
-    
-        <super-tab *ngFor="let page of pages" [root]="page.pageName" [title]="page.title" [icon]="page.icon" [id]="page.id"></super-tab>
-
-        
+    <super-tab *ngFor="let page of pages" [root]="page.pageName" [title]="page.title" [icon]="page.icon" [id]="page.id"></super-tab>
   </super-tabs>
-    
 
 </ion-content>

@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the CodePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { DataProvider } from '../../providers/data/data';
+// import { Observable } from 'rxjs/Observable';
+import { Post } from '../../models/Post';
+
+
 
 @IonicPage()
 @Component({
@@ -15,11 +14,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CodePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  posts: Post[];
+
+  code: string = "account";
+  isAndroid: boolean = false;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private DataService: DataProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CodePage');
+    this.DataService.getRemoteData().subscribe(posts => {
+      this.posts = posts;
+    });
+    
   }
-
 }

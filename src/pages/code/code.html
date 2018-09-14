@@ -1,3 +1,71 @@
-<ion-content padding>
-  CODE
-  </ion-content>
+<ion-content>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="code">
+      <ion-segment-button value="account">
+        Account
+      </ion-segment-button>
+      <ion-segment-button value="scan">
+        Scan
+      </ion-segment-button>
+      <ion-segment-button value="history">
+        History
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+
+
+  <div [ngSwitch]="code">
+
+    <ion-list *ngSwitchCase="'account'">
+      <ion-card *ngFor="let post of posts">
+        <ion-card-content>
+          <ion-grid>
+            <ion-row justify-content-between align-items-center>
+              <ion-col>
+                <p>
+                  <span class="blue">Code:</span> {{ post.code }}</p>
+                <p>
+                  <span class="blue">Zone:</span> {{ post.zone }}</p>
+                <p>
+                  <span class="blue">Vendor:</span> {{ post.vendor }}</p>
+              </ion-col>
+              <ion-col col-auto>
+                <button ion-button>Transfer</button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'scan'">
+      <button ion-button full>SCAN</button>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'history'">
+      <ion-card *ngFor="let post of posts">
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <p>
+                  <span class="blue">Code:</span> {{ post.code }}</p>
+                <p>
+                  <span class="blue">Zone:</span> {{ post.zone }}</p>
+              </ion-col>
+              <ion-col>
+                <p>
+                  <span class="blue">Vendor:</span> {{ post.vendor }}</p>
+                <p>
+                  <span class="blue">Date:</span> {{ post.date }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+
+</ion-content>
